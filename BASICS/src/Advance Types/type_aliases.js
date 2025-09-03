@@ -1,21 +1,13 @@
-type Employee = {
-    readonly id : number,
-    name:string,
-    retire:(date:Date) => void    
-}
 // we can add as many fields above
-
-
-
 // here is the duplicate of the object from the object.ts
-let employeeUser2:Employee = { id: 1, name: 'Srajan',
-    retire:(date:Date)=>{
+var employeeUser2 = { id: 1, name: 'Srajan',
+    retire: function (date) {
         console.log(date);
     }
-}
+};
+// * Note : we can create a type by merging two or more types using the '&' symbol, also note that above at last we have created a type only but in a hacky way, which is NOT advised, proper separate defining is good, the way we did above with the last type is more like anonymous type where there is no separate name for it like the other 2.
 // makes it more readable
-
-/* 
+/*
 Advantages of using type aliases in TypeScript:
 
 Reusability:
@@ -35,4 +27,4 @@ Type aliases can represent unions, intersections, and other advanced type constr
 
 Works with Objects, Primitives, and Functions:
 You can alias not just objects, but also primitive types, function signatures, and more.
-*/
+*/ 

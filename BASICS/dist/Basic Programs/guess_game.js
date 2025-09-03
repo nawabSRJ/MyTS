@@ -4,6 +4,7 @@ function checkGuess() {
     const input = document.getElementById('guess');
     const result = document.getElementById('result');
     const userGuess = Number(input.value);
+    console.log(userGuess);
     if (userGuess === computer) {
         result.textContent = 'Correct!';
     }
